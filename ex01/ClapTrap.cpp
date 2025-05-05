@@ -45,8 +45,8 @@ void ClapTrap::attack(const std::string &target) // method to attack a target
 		std::cout << "cannot attack!" << std::endl;		 // print that it cannot attack
 		return;
 	}
-	std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl; // print the attack message
-	_energyPoints--;																												  // decrease energy points by 1
+	std::cout << "ClapTrap " << _name << " attacks " << target << ", causiing " << _attackDamage << " points of damage!" << std::endl; // print the attack message
+	_energyPoints--;																												   // decrease energy points by 1
 }
 void ClapTrap::takeDamage(unsigned int amount) // method to take damage
 {
