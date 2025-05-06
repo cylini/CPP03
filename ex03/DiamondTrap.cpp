@@ -11,6 +11,7 @@ DiamondTrap::DiamondTrap() : _name("default")
 // f there are unique members in each class that need to be copied -> better to explicitly copy the members after the base class constructors are called
 DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), ScavTrap(other), FragTrap(other)
 {
+
 	_name = other._name; // Copy the specific member _name
 	// Copy the specific members from ClapTrap, FragTrap, and ScavTrap
 	_hitPoints = other._hitPoints;
@@ -26,6 +27,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), ScavTrap(o
 //-> make sure assign each properly
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 {
+
 	if (this != &other)
 	{
 		ClapTrap::operator=(other);
@@ -40,6 +42,8 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 // construtor with name
 DiamondTrap::DiamondTrap(const std::string &name) : ScavTrap(), FragTrap(), _name(name)
 {
+	ScavTrap::setScavEnergyPoints(50); // Set ScavTrap's energy points
+
 	ClapTrap::_name = _name + "_clap_name";	 // Modify ClapTrap's name to have the "_clap_name" suffix
 	_hitPoints = FragTrap::_hitPoints;		 // Initialize from FragTrap
 	_energyPoints = ScavTrap::_energyPoints; // Initialize from ScavTrap
@@ -64,13 +68,13 @@ void DiamondTrap::whoAmI()
 {
 	std::cout << "DiamondTrap Name: " << _name << " | ClapTrap Name: " << ClapTrap::getName() << std::endl;
 }
-// // Default constructor
+// Default constructor
 // DiamondTrap::DiamondTrap()
 // 	: ClapTrap("default_clap_name"), ScavTrap(), FragTrap(), _name("default")
 // {
-// 	// this->_hitPoints = FragTrap::_hitPoints;
-// 	// this->_energyPoints = ScavTrap::_energyPoints;
-// 	// this->_attackDamage = FragTrap::_attackDamage;
+// 	this->_hitPoints = FragTrap::_hitPoints;
+// 	this->_energyPoints = ScavTrap::_energyPoints;
+// 	this->_attackDamage = FragTrap::_attackDamage;
 
 // 	std::cout << "💎 DiamondTrap default constructor called for " << this->_name << std::endl;
 // }

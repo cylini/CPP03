@@ -15,6 +15,7 @@ public:
 
 	void attack(const std::string &target);
 	void guardGate();
+	void setScavEnergyPoints(unsigned int energyPoints);
 };
 
 #endif
