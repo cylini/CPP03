@@ -1,21 +1,20 @@
 #include "ScavTrap.hpp"
 #include <iostream>
 
-// Constructeur par défaut
 ScavTrap::ScavTrap() : ClapTrap("DefaultScav")
 {
-	_hitPoints = 100;
-	_energyPoints = 50;
-	_attackDamage = 20;
-	std::cout << "ScavTrap default constructor called for " << _name << std::endl;
+	// _hitPoints = 100;
+	// _energyPoints = 50;
+	// _attackDamage = 20;
+	std::cout << "ScavTrap default constructorr called for " << _name << std::endl;
 }
 
 // Constructeur avec nom
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
 {
-	_hitPoints = 100;
-	_energyPoints = 50;
-	_attackDamage = 20;
+	// _hitPoints = 100;
+	// _energyPoints = 50;
+	// _attackDamage = 20;
 	std::cout << "ScavTrap constructor called for " << _name << std::endl;
 }
 

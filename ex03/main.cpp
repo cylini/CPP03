@@ -36,6 +36,24 @@ int main()
 	std::cout << "\n🛠️ Diamond repairs (30 HP)" << std::endl;
 	diamond.beRepaired(30);
 
+	std::cout << "\n🧼 Diamond requests a high five:" << std::endl;
+	diamond.highFivesGuys();
+
+	std::cout << "\n🛡️ Diamond enters guard gate mode:" << std::endl;
+	diamond.guardGate();
+
+	std::cout << "\n💢 Diamond takes damage (60 HP)" << std::endl;
+	diamond.takeDamage(60);
+
+	std::cout << "\n🛠️ Diamond repairs (10 HP)" << std::endl;
+	diamond.beRepaired(10);
+
+	std::cout << "\n🎯 Diamond attacks 👾 ENEMY!" << std::endl;
+	diamond.attack("👾 ENEMY");
+
+	std::cout << "\n💢 Diamond takes damage (30 HP)" << std::endl;
+	diamond.takeDamage(30);
+
 	displayClapTrapInfo(diamond);
 
 	std::cout << "\n🧼 End of main(), destruction begins...\n"
