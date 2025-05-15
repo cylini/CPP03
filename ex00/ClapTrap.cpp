@@ -2,28 +2,28 @@
 
 ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(1)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(1)
 {
-	std::cout << "Parameterized constructor called" << std::endl;
+	std::cout << "ClapTrap parameterized constructor called" << std::endl;
 }
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap Destructor " << _name << " was called" << std::endl;
+	std::cout << "ClapTrap destructor " << _name << " was called" << std::endl;
 }
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap copy constructor called" << std::endl;
 	_name = other._name;
 	_hitPoints = other._hitPoints;
 	_energyPoints = other._energyPoints;
 	_attackDamage = other._attackDamage;
-	std::cout << "ClapTrap " << _name << "was created" << std::endl;
+	std::cout << "ClapTrap " << _name << " was created" << std::endl;
 }
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "ClapTrap copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
 		this->_name = other._name;
@@ -42,10 +42,10 @@ void ClapTrap::attack(const std::string &target) // method to attack a target
 			std::cout << " has no hit points left and "; // print that it has no hit points
 		else if (_energyPoints == 0)					 // check if ClapTrap has no energy
 			std::cout << " has no energy left and ";	 // print that it has no energy
-		std::cout << "cannot attack!" << std::endl;		 // print that it cannot attack
+		std::cout << " cannot attack!" << std::endl;		 // print that it cannot attack
 		return;
 	}
-	std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl; // print the attack message
+	std::cout << "ClapTrap " << _name << " attacks " << target << " , causing " << _attackDamage << " points of damage!" << std::endl; // print the attack message
 	_energyPoints--;																												  // decrease energy points by 1
 }
 void ClapTrap::takeDamage(unsigned int amount) // method to take damage
@@ -83,7 +83,7 @@ void ClapTrap::beRepaired(unsigned int amount) // method to repair ClapTrap
 	_energyPoints--;	  // decrease energy points by 1
 	std::cout << "ClapTrap " << _name << " repairs itself for " << amount
 			  << " hit points, used 1 energy! Current HP: " << _hitPoints
-			  << ", Energy left: " << _energyPoints << std::endl;
+			  << " , Energy left: " << _energyPoints << std::endl;
 }
 
 // Getters

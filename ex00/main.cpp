@@ -7,11 +7,6 @@ Attacking and repairing each cost 1 energy point.
 ClapTrap can’t do anything if it has no hit points or energy points left.
 */
 
-/** @note static
- * Inside a class ➝ Use static if the function doesn’t need 'this'
- * Outside a class ➝ Use static if need to limit the function's scope to the current .cpp file
- * -> no need to declare in hpp file!
- */
 static void displayClapTrapInfo(const ClapTrap &clapTrap)
 {
 	std::cout << "﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌ [STATUS] ﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌" << std::endl;

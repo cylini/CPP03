@@ -17,9 +17,10 @@ public:
 	ClapTrap(const ClapTrap &other);
 	~ClapTrap();
 	ClapTrap &operator=(const ClapTrap &other);
-	void attack(const std::string &target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
+
+	void attack(const std::string &target);// Attack a target
+	void takeDamage(unsigned int amount);// Take damage
+	void beRepaired(unsigned int amount);// Repair damage
 
 	std::string getName() const;
 	unsigned int getHitPoints() const;

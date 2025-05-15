@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap("DefaultFrag")
+FragTrap::FragTrap() : ClapTrap("Default FragTrap")
 {
 	_hitPoints = 100;
 	_energyPoints = 100;
@@ -9,9 +9,9 @@ FragTrap::FragTrap() : ClapTrap("DefaultFrag")
 }
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 {
-	// _hitPoints = 100;
-	// _energyPoints = 100;
-	// _attackDamage = 30;
+	_hitPoints = 100;
+	_energyPoints = 100;
+	_attackDamage = 30;
 	std::cout << "FragTrap constructor called for " << _name << std::endl;
 }
 FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
@@ -39,8 +39,8 @@ void FragTrap::attack(const std::string &target)
 		return;
 	}
 	_energyPoints--;
-	std::cout << "FragTrap " << _name << " attackss " << target
-			  << ", causing " << _attackDamage << " points of damage!" << std::endl;
+	std::cout << "FragTrap " << _name << " attacks " << target
+			  << " , causing " << _attackDamage << " points of damage!" << std::endl;
 }
 void FragTrap::highFivesGuys()
 {

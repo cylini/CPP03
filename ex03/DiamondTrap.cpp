@@ -1,8 +1,11 @@
 #include "DiamondTrap.hpp"
 #include <iostream>
 
-DiamondTrap::DiamondTrap() : _name("default")
+DiamondTrap::DiamondTrap()
 {
+	_name = "Default"; // Default name
+	ScavTrap::setScavEnergyPoints(50); // Set ScavTrap's energy points
+
 	std::cout << "(Child Constructor) DiamondTrap default created" << std::endl;
 }
 
@@ -13,6 +16,8 @@ DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), ScavTrap(o
 	_hitPoints = other._hitPoints;
 	_energyPoints = other._energyPoints;
 	_attackDamage = other._attackDamage;
+	ScavTrap::setScavEnergyPoints(50); // Set ScavTrap's energy points
+
 	std::cout << "(Child Constructor) DiamondTrap " << _name << " copied" << std::endl;
 }
 
@@ -35,8 +40,7 @@ DiamondTrap::DiamondTrap(const std::string &name) : /* ScavTrap(), FragTrap(), *
 
 	ClapTrap::_name = _name + "_clap_name"; // Modify ClapTrap's name to have the "_clap_name" suffix
 	_hitPoints = FragTrap::_hitPoints;		// Initialize from FragTrap
-	// _energyPoints = ScavTrap::_energyPoints; // Initialize from ScavTrap
-	ScavTrap::setScavEnergyPoints(50);		// Set ScavTrap's energy points
+	ScavTrap::setScavEnergyPoints(50);		 // Set ScavTrap's energy points
 	_attackDamage = FragTrap::_attackDamage; // Initialize from FragTrap
 	std::cout << "(Child Constructor) DiamondTrap Created : " << _name << std::endl;
 }

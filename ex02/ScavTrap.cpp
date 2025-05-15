@@ -2,7 +2,7 @@
 #include <iostream>
 
 // Constructeur par défaut
-ScavTrap::ScavTrap() : ClapTrap("DefaultScav")
+ScavTrap::ScavTrap() : ClapTrap("Default ScavTrap ")
 {
 	_hitPoints = 100;
 	_energyPoints = 50;
@@ -34,7 +34,7 @@ ScavTrap::~ScavTrap()
 // Opérateur d'affectation
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
-	std::cout << "ScavTrap assignment operator called" << std::endl;
+	std::cout << "ScavTrap assignment operator called " << std::endl;
 	if (this != &other)
 	{
 		ClapTrap::operator=(other); // réutilise l'opérateur de la classe mère
@@ -52,7 +52,7 @@ void ScavTrap::attack(const std::string &target)
 	}
 	_energyPoints--;
 	std::cout << "ScavTrap " << _name << " attacks " << target
-			  << ", caausing " << _attackDamage << " points of damage!" << std::endl;
+			  << " , causing " << _attackDamage << " points of damage!" << std::endl;
 }
 
 // Méthode spéciale guardGate

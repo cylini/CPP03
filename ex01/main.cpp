@@ -16,7 +16,7 @@ int main(void)
 	std::cout << "=========================" << std::endl;
 	std::cout << "===== CLAPTRAP TEST =====" << std::endl;
 	std::cout << "=========================" << std::endl;
-	ClapTrap clap("👹PAPA");
+	ClapTrap clap("👹DRAGON");
 	displayClapTrapInfo(clap);
 
 	// Test attack on enemy A
@@ -59,29 +59,29 @@ int main(void)
 
 	return 0;
 
-	// ClapTrap robot("Clappy");
-	// robot.attack("a cardboard box");
-	// robot.beRepaired(5);
-	// robot.takeDamage(7);
-	// for (int i = 0; i < 7; ++i)
-	// {
-	// 	robot.attack("dummy target");
-	// }
-	// robot.beRepaired(3);
-	// robot.takeDamage(10);
-
-	// std::cout << "====================" << std::endl;
-
-	// ScavTrap scavTrap("Scavvy");
-	// scavTrap.attack("a cardboard box");
-	// scavTrap.beRepaired(5);
-	// scavTrap.takeDamage(7);
-	// for (int i = 0; i < 7; ++i)
-	// {
-	// 	scavTrap.attack("dummy target");
-	// }
-	// scavTrap.beRepaired(3);
-	// scavTrap.takeDamage(10);
-
-	// return 0;
 }
+// ClapTrap robot("Clappy");
+// robot.attack("a cardboard box");
+// robot.beRepaired(5);
+// robot.takeDamage(7);
+// for (int i = 0; i < 7; ++i)
+// {
+// 	robot.attack("dummy target");
+// }
+// robot.beRepaired(3);
+// robot.takeDamage(10);
+
+// std::cout << "====================" << std::endl;
+
+// ScavTrap scavTrap("Scavvy");
+// scavTrap.attack("a cardboard box");
+// scavTrap.beRepaired(5);
+// scavTrap.takeDamage(7);
+// for (int i = 0; i < 7; ++i)
+// {
+// 	scavTrap.attack("dummy target");
+// }
+// scavTrap.beRepaired(3);
+// scavTrap.takeDamage(10);
+
+// return 0;
