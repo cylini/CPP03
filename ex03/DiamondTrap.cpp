@@ -3,9 +3,8 @@
 
 DiamondTrap::DiamondTrap()
 {
-	_name = "Default"; // Default name
-	ScavTrap::setScavEnergyPoints(50); // Set ScavTrap's energy points
-
+	_name = "Default";								   // Default name
+	ClapTrap::_energyPoints = ScavTrap::_energyPoints; // Initialize from ScavTrap
 	std::cout << "(Child Constructor) DiamondTrap default created" << std::endl;
 }
 
@@ -16,8 +15,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), ScavTrap(o
 	_hitPoints = other._hitPoints;
 	_energyPoints = other._energyPoints;
 	_attackDamage = other._attackDamage;
-	ScavTrap::setScavEnergyPoints(50); // Set ScavTrap's energy points
-
+	ClapTrap::_energyPoints = ScavTrap::_energyPoints; // Initialize from ScavTrap
 	std::cout << "(Child Constructor) DiamondTrap " << _name << " copied" << std::endl;
 }
 
@@ -35,13 +33,13 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 }
 
 // construtor with name
-DiamondTrap::DiamondTrap(const std::string &name) : /* ScavTrap(), FragTrap(), */ _name(name)
+DiamondTrap::DiamondTrap(const std::string &name) : _name(name)
 {
 
 	ClapTrap::_name = _name + "_clap_name"; // Modify ClapTrap's name to have the "_clap_name" suffix
-	_hitPoints = FragTrap::_hitPoints;		// Initialize from FragTrap
-	ScavTrap::setScavEnergyPoints(50);		 // Set ScavTrap's energy points
-	_attackDamage = FragTrap::_attackDamage; // Initialize from FragTrap
+	_hitPoints = FragTrap::_hitPoints;
+	ClapTrap::_energyPoints = ScavTrap::_energyPoints; // Initialize from ScavTrap
+	_attackDamage = FragTrap::_attackDamage;		   // Initialize from FragTrap
 	std::cout << "(Child Constructor) DiamondTrap Created : " << _name << std::endl;
 }
 

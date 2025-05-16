@@ -20,43 +20,42 @@ int main()
 	std::cout << "💎🧬🧪===============================\n"
 			  << std::endl;
 
-	DiamondTrap myDiamond_2 ("💎 DIAMOND 1");
-	// DiamondTrap myDiamond_2(myDiamond_1);
+	DiamondTrap myDiamond_1 ("💎 DIAMOND 1");
 
-	std::cout << "le monstre 2 s'appelle  " << myDiamond_2.getName() << std::endl;
-	displayClapTrapInfo(myDiamond_2);
+	std::cout << "le monstre 1 s'appelle  " << myDiamond_1.getName() << std::endl;
+	displayClapTrapInfo(myDiamond_1);
 
 	std::cout << "\n🎯 Diamond attacks 👾 ENEMY!" << std::endl;
-	myDiamond_2.attack("👾 ENEMY");
-
-	std::cout << "\n💬 Diamond asks who he is:" << std::endl;
-	myDiamond_2.whoAmI();
+	myDiamond_1.attack("👾 ENEMY");
 
 	std::cout << "\n💢 Diamond takes damage (50 HP)" << std::endl;
-	myDiamond_2.takeDamage(50);
-
+	myDiamond_1.takeDamage(50);
+	
 	std::cout << "\n🛠️ Diamond repairs (30 HP)" << std::endl;
-	myDiamond_2.beRepaired(30);
+	myDiamond_1.beRepaired(30);
+	
+	std::cout << "\n💢 Diamond takes damage (60 HP)" << std::endl;
+	myDiamond_1.takeDamage(60);
+	
+	std::cout << "\n🛠️ Diamond repairs (10 HP)" << std::endl;
+	myDiamond_1.beRepaired(10);
+	
+	std::cout << "\n🎯 Diamond attacks 👾 ENEMY!" << std::endl;
+	myDiamond_1.attack("👾 ENEMY");
+	
+	std::cout << "\n💢 Diamond takes damage (30 HP)" << std::endl;
+	myDiamond_1.takeDamage(30);
+
+	std::cout << "\n💬 Diamond asks who he is:" << std::endl;
+	myDiamond_1.whoAmI();
 
 	std::cout << "\n🧼 Diamond requests a high five:" << std::endl;
-	myDiamond_2.highFivesGuys();
-
+	myDiamond_1.highFivesGuys();
+	
 	std::cout << "\n🛡️ Diamond enters guard gate mode:" << std::endl;
-	myDiamond_2.guardGate();
-
-	std::cout << "\n💢 Diamond takes damage (60 HP)" << std::endl;
-	myDiamond_2.takeDamage(60);
-
-	std::cout << "\n🛠️ Diamond repairs (10 HP)" << std::endl;
-	myDiamond_2.beRepaired(10);
-
-	std::cout << "\n🎯 Diamond attacks 👾 ENEMY!" << std::endl;
-	myDiamond_2.attack("👾 ENEMY");
-
-	std::cout << "\n💢 Diamond takes damage (30 HP)" << std::endl;
-	myDiamond_2.takeDamage(30);
-
-	displayClapTrapInfo(myDiamond_2);
+	myDiamond_1.guardGate();
+	
+	displayClapTrapInfo(myDiamond_1);
 
 	std::cout << "\n🧼 End of main(), destruction begins...\n"
 			  << std::endl;

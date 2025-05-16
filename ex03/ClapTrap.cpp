@@ -42,7 +42,7 @@ void ClapTrap::attack(const std::string &target) // method to attack a target
 			std::cout << " has no hit points left and "; // print that it has no hit points
 		else if (_energyPoints == 0)					 // check if ClapTrap has no energy
 			std::cout << " has no energy left and ";	 // print that it has no energy
-		std::cout << " cannot attack!" << std::endl;		 // print that it cannot attack
+		std::cout << " cannot attack!" << std::endl;	 // print that it cannot attack
 		return;
 	}
 	std::cout << "ClapTrap " << _name << " attacks " << target << " , causing " << _attackDamage << " points of damage!" << std::endl; // print the attack message

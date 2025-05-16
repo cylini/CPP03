@@ -7,7 +7,7 @@
 class ScavTrap : virtual public ClapTrap
 {
 protected:
-	void setScavEnergyPoints(unsigned int energyPoints);
+	unsigned int _energyPoints;
 
 public:
 	ScavTrap();

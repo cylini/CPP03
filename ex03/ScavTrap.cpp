@@ -59,9 +59,4 @@ void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << _name << " is now in Gate keeper mode." << std::endl;
 }
-// Setter pour les points d'énergie
-void ScavTrap::setScavEnergyPoints(unsigned int energyPoints)
-{
-	_energyPoints = energyPoints;
-	std::cout << "ScavTrap " << _name << " energy points set to " << _energyPoints << std::endl;
-}
+

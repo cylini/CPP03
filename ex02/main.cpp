@@ -19,7 +19,7 @@ int main()
 	std::cout << "=========================" << std::endl;
 	std::cout << "===== CLAPTRAP TEST =====" << std::endl;
 	std::cout << "=========================" << std::endl;
-	ClapTrap clap("👹PAPA");
+	ClapTrap clap("👹DRAGON");
 	displayClapTrapInfo(clap);
 
 	clap.attack("👿enemy A");
